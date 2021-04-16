@@ -67,7 +67,7 @@ MAINTAINER Christoph Blessing <chris24.blessing@gmail.com>
     export SHELL=/bin/sh
 
 %runscript
-    exec /bin/sh "$@"
+    exec /bin/sh -c "$@"
 
 %startscript
     jupyter lab
