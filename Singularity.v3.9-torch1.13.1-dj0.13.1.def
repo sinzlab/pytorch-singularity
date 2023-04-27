@@ -5,9 +5,7 @@ From: ubuntu:22.04
 MAINTAINER Christoph Blessing <chris24.blessing@gmail.com>
 
 %post
-    apt update
-    DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install -y tzdata
-    apt install -y software-properties-common
+    apt update && apt install -y software-properties-common
     add-apt-repository universe
 
 
@@ -47,7 +45,7 @@ MAINTAINER Christoph Blessing <chris24.blessing@gmail.com>
         blackcellmagic\
         pytest \
         pytest-cov \
-        numpy==1.23.5 \
+        numpy \
         matplotlib \
         scipy \
         pandas \
