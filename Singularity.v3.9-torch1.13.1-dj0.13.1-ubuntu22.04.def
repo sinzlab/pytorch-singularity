@@ -28,22 +28,22 @@ MAINTAINER Christoph Blessing <chris24.blessing@gmail.com>
         python3-wheel \
         graphviz \
         libhdf5-dev \
-        python3.10 \
-        python3.10-dev \
-        python3.10-distutils \
+        python3.9 \
+        python3.9-dev \
+        python3.9-distutils \
         python3-testresources \
         swig
     apt-get clean
 
-    ln -s /usr/bin/python3.10 /usr/local/bin/python
-    ln -s /usr/bin/python3.10 /usr/local/bin/python3
+    ln -s /usr/bin/python3.9 /usr/local/bin/python
+    ln -s /usr/bin/python3.9 /usr/local/bin/python3
 
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-    python3.10 get-pip.py
+    python3.9 get-pip.py
     rm get-pip.py
-    python3.10 -m pip --no-cache-dir install --upgrade pip
+    python3.9 -m pip --no-cache-dir install --upgrade pip
 
-    python3.10 -m pip --no-cache-dir install \
+    python3.9 -m pip --no-cache-dir install \
         blackcellmagic\
         pytest \
         pytest-cov \
@@ -63,7 +63,7 @@ MAINTAINER Christoph Blessing <chris24.blessing@gmail.com>
         jupyterlab \
         datajoint==0.13.1
     
-    python3.10 -m pip --no-cache-dir  install \
+    python3.9 -m pip --no-cache-dir  install \
         torch==1.13.1 \
         torchvision==0.14.1 \
         torchaudio==0.13.1 \
